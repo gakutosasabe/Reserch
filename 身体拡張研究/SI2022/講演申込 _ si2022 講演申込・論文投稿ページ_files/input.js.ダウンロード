@@ -1,0 +1,67 @@
+
+// JavaScript Document
+var lang = (location.href.match(/\/en/)) ? "/en" : "";
+
+$().ready(function () {
+  /*	if( $("#PostSessionName").attr('value') == "一般発表" ){
+   $("#selectKeyword").fadeIn();
+   }
+   else{
+   $("#selectKeyword").hide();
+   }*/
+	
+  if ($("#PostSessionName").attr('value')) {
+    $("#selectSession").html($("#PostSessionName").attr('value'));
+  }
+
+  if ($("#PostSessionEditName").attr('value')) {
+    $("#selectEditSession").html($("#PostSessionEditName").attr('value'));
+  }
+});
+function openSessionWindow(type) {
+  openSessionWindow(type, 0);
+}
+function openSessionWindow(type,flg) {
+
+  if (type == "os_ds") {
+    var faceboxDisplayTag = $.facebox.settings.faceboxDisplayTag;
+    $.facebox.settings.faceboxDisplayTag = '#faceBoxIn';
+    jQuery.facebox({ajax: lang + '/session_select/?flg='+flg}, 'mainbox');
+    $.facebox.settings.faceboxDisplayTag = faceboxDisplayTag;
+  }
+  else if (type == "international") {
+    var faceboxDisplayTag = $.facebox.settings.faceboxDisplayTag;
+    $.facebox.settings.faceboxDisplayTag = '#faceBoxIn';
+    jQuery.facebox({ajax: lang + '/session_select/international?flg='+flg}, 'mainbox');
+    $.facebox.settings.faceboxDisplayTag = faceboxDisplayTag;
+  }
+}
+function selectSession(name, id) {
+  selectSession(name, id,0);
+}
+function selectSession(name, id,type) {
+  $.facebox.close();
+
+  if( type == 0 ){
+    $("#selectSession").html(name);
+    $("#PostSessionType").attr('value', id);
+    $("#PostSessionName").attr('value', name);
+
+  }else{
+    $("#selectEditSession").html(name);
+    $("#PostSessionEditType").attr('value', id);
+    $("#PostSessionEditName").attr('value', name);
+
+  }
+}
+
+//入力処理
+function inputCapitalize(ob) {
+  ob.value = capitalize(ob.value);
+}
+function capitalize(str) {
+  return str.replace(/^\w+/g, function (word) {
+    return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
+  });
+}
+

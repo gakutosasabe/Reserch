@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)http://si-divconf.web-concier.net/new_posts/input -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>講演申込 : si2022 講演申込・論文投稿ページ</title>
+<link rel="stylesheet" type="text/css" href="./講演申込 _ si2022 講演申込・論文投稿ページ_files/common.css">
+<link rel="stylesheet" type="text/css" href="./講演申込 _ si2022 講演申込・論文投稿ページ_files/layout.css">
+<script type="text/javascript" src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/jquery.js.ダウンロード"></script>
+<script type="text/javascript" src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/common.js.ダウンロード"></script>
+<link href="http://si-divconf.web-concier.net/favicon.ico" type="image/x-icon" rel="icon"><link href="http://si-divconf.web-concier.net/favicon.ico" type="image/x-icon" rel="shortcut icon"><link rel="stylesheet" type="text/css" href="./講演申込 _ si2022 講演申込・論文投稿ページ_files/facebox.css">
+	<script type="text/javascript" src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/facebox.js.ダウンロード"></script>
+	<script type="text/javascript" src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/input.js.ダウンロード"></script>
+	<script type="text/javascript" src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/user_input.js.ダウンロード"></script></head>
+<body>
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="http://si-divconf.web-concier.net/new_posts/input/" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div><div id="header"><p><img src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/header_admin.png" alt="システムインテグレーション部門講演会 SI2022"></p></div>
+
+  <div id="outBox">
+    <p id="pan"><a href="http://si-divconf.web-concier.net/">トップ</a>&nbsp;&gt;&nbsp;講演申込</p>
+    <h1><span class="h1Text">講演申込</span></h1>
+    <h2 class="mb10"><span class="h2Text">入力に際しての注意</span></h2>
+    <div class="thesis ml35 pb15">
+      <ul>
+      <li>■ 入力したデータは講演プログラム等に使用されますので，講演原稿と内容が一致するように入力して下さい．</li>
+      <li>■ トラブルの原因となりますので，半角カタカナは絶対に使用しないで下さい．</li>
+      <li>■ μや∞などのギリシャ文字は全角文字をご使用下さい．</li>
+      <li>■ エラーが回避できずに入力が受け付けられない場合にも，問い合わせにてご相談下さい．</li>
+      <li>■ 【必須】と記載されている項目は必須事項となります．記入されない場合は登録できません．</li>
+    </ul>    </div>
+
+    <h2 class="mb10"><span class="h2Text">Javascript による入力補助について</span></h2>
+    <div class="thesis ml35 pb15">
+      <p class="pb10 red">ご利用前にブラウザの設定でJavaScriptが使用可能になっているかご確認ください。<br>使用可能となっていない場合、講演申込ができませんので必ず有効にしてください。</p>    </div>
+    <div style="display: none"><h2 class="mb10"><span class="h2Text">ストリーミング配信について</span></h2>
+      <div class="thesis ml35 pb50">
+        <p class="pb10">SI2022では、口頭発表を学会参加者を対象としてストリーミング配信いたします．視聴サイトはパスワードやネットワークによるアクセス制限は設けておりません．日替わりの視聴サイトURLを会場でのみ掲示いたします．参加者以外の方々への視聴サイトURLの配布・共有・譲渡は禁止いたします．配信されている映像の録画や録音および再配信は禁止いたします．特別な事情がある場合は，連絡欄にて実行委員にご相談ください．<br>なお，口頭発表のストリーミング配信を希望しない場合は，現地にて拒否することが可能です．</p>        <label>
+          <div class="input checkbox"><input type="hidden" name="data[streaming_check]" id="streaming_check_" value="0"><input type="checkbox" name="data[streaming_check]" checked="checked" value="1" id="streaming_check"><label for="streaming_check">発表のストリーミング配信に関して了承しました。</label></div>      </label></div>
+    </div>
+
+    <h2 class="mb15"><span class="h2Text">１．申込セッション【必須】</span></h2>
+    <div class="ml35">
+              <p class="text01 pb15">■ 全ての講演がオーガナイズドセッション（OS）形式で実施されます。<br>
+■ できるだけ研究内容に関連するOSをご選択ください．（OS のオーガナイザに事前にご連絡頂く必要はありません．）<br>
+■ 各OSの詳細につきましては，OSリストをご参照下さい．</p>
+        <div class="listBox mb15">
+          <ul class="clearfix">
+                          <li><a href="javascript:;" onclick="openSessionWindow(&#39;os_ds&#39;,0); return false;">OS</a></li>
+
+                        
+          </ul>
+        </div>
+
+        <h3>選択したセッション</h3>
+        <p class="text01 mb20"><span id="selectSession">&nbsp;</span>
+                    <input type="hidden" name="data[Post][session_type]" id="PostSessionType">          <input type="hidden" name="data[Post][session_name]" id="PostSessionName"></p>
+
+          </div>
+    <h2 class="mb15"><span class="h2Text">２．講演の種類【必須】</span></h2>
+    <div class="ml35 mb20">
+      <div class="thesis">
+        <ul>
+          <li>■ オーガナイザから「キーノート講演」として依頼されている場合は「キーノート講演」を，<br>※１枠は15分、２枠は30分の割り当てとなります ．<br>そうでない場合は「インタラクティブ発表」を選んで下さい．<br>「口頭発表」をご希望の場合は一旦別の講演種類を選択の上お申込みいただき<br>講演申込IDをお書き添えの上お問い合わせください．</li>
+          <li>■ プログラム編成の都合から、講演種類のご変更をお願いする場合がございます．</li>
+        </ul>
+      </div>
+            <select name="data[Post][type]" class="form_no_width" id="PostType">
+<option value="">選択してください</option>
+<option value="2">キーノート（１枠）</option>
+<option value="4">キーノート（２枠）</option>
+<option value="1">インタラクティブ発表</option>
+</select>          </div>
+    <h2 class="mb15"><span class="h2Text">３．講演題目</span></h2>
+    <div class="ml35">
+      <div class="thesis">
+        <ul>
+          <li>■ 主題をご記入下さい．（副題は任意）</li>
+          <li>■ プログラム等に掲載する情報は，ここに入力されたデータを使用しますので，<br>
+実際の予稿原稿と一致した情報を入力願います．</li>
+          <li>■ プログラム等，一部の出版物では副題は掲載されない事があります．</li>
+          <li>■ ここでは，主題・副題の英文を入力する必要はありません．</li>
+        </ul>
+      </div>
+      <h3>主題（150文字以内）【必須】</h3>
+      <p class="ml15 mb15">
+        <input name="data[Post][title]" type="text" class="form01" id="PostTitle"></p>
+      <h3>副題（150文字以内）</h3>
+      <p class="ml15 mb15">
+        <input name="data[Post][sub_title]" type="text" class="form01" id="PostSubTitle"></p>
+    </div>
+    <h2 class="mb15"><span class="h2Text">４．著者【必須】</span></h2>
+    <div class="ml35">
+      <div class="thesis">
+        <ul>
+          <li>■ 入力する著者の順番は予稿原稿に記載する著者の順番と一致させて下さい．</li>
+          <li>■ 登壇者には著者名の前のラジオボタンをチェックして下さい．</li>
+          <li>■ 英語表記のお名前の方は，漢字姓にFamily name、漢字名に Given name, Middle initial の順で<br>
+カンマ＋半角スペースで区切って入力下さい．</li>
+          <li>■ 氏名ふりがな ： 著者索引作成用のデータです．ひらがな入力を原則とします．英語表記のお名前の方は，<br>
+著者名と同じ情報を入力して下さい．</li>
+          <li>■ 漢字氏名が可能な外国人の方は漢字，アルファベットのどちらで入力頂いても構いません．<br>
+索引については，ふりがなをひらがなで入力頂いた場合には５０音別の一覧に，英語で入力頂いた場合には<br>
+アルファベット別の一覧に掲載いたします．</li>
+          <li>■ 著者数が２０人を超える場合は，２１人目以降の情報（著者名，氏名ふりがな，所属）を通信欄にお書き下さい．</li>
+          <li>■ プログラム等に掲載の際には，ここに入力された所属が略称となる場合があります．ご了承下さい．<br>
+          <div class="pt15 pl10"><img src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/input_sample.png"></div></li>
+        </ul>
+      </div>
+
+                  <table border="0" cellpadding="0" cellspacing="0" class="thesisTable mb10" id="author_table">
+        <colgroup><col width="60">
+        </colgroup><tbody><tr>
+          <td class="authorText txt_left">著者順</td>
+          <th class="th02 authorText">発表者</th>
+          <td class="td01 authorText"><p class="ml10">漢字姓</p></td>
+          <td class="td01 authorText">漢字名</td>
+          <td class="td01 authorText"><p class="ml10">かな姓</p></td>
+          <td class="td01 authorText">かな名</td>
+          <td class="td01 authorText">所属</td>
+        </tr>
+                  <tr>
+            <td class="authorText">1</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="1"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][0][name1]" type="text" class="form_width100" id="Author0Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][0][name2]" type="text" class="form_width100" id="Author0Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][0][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author0NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][0][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author0NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][0][afflication]" type="text" class="form_width100" id="Author0Afflication">					</span></td>
+          </tr>
+                  <tr style="display: table-row;">
+            <td class="authorText">2</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="2"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][1][name1]" type="text" class="form_width100" id="Author1Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][1][name2]" type="text" class="form_width100" id="Author1Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][1][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author1NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][1][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author1NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][1][afflication]" type="text" class="form_width100" id="Author1Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">3</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="3"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][2][name1]" type="text" class="form_width100" id="Author2Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][2][name2]" type="text" class="form_width100" id="Author2Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][2][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author2NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][2][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author2NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][2][afflication]" type="text" class="form_width100" id="Author2Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">4</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="4"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][3][name1]" type="text" class="form_width100" id="Author3Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][3][name2]" type="text" class="form_width100" id="Author3Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][3][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author3NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][3][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author3NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][3][afflication]" type="text" class="form_width100" id="Author3Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">5</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="5"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][4][name1]" type="text" class="form_width100" id="Author4Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][4][name2]" type="text" class="form_width100" id="Author4Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][4][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author4NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][4][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author4NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][4][afflication]" type="text" class="form_width100" id="Author4Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">6</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="6"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][5][name1]" type="text" class="form_width100" id="Author5Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][5][name2]" type="text" class="form_width100" id="Author5Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][5][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author5NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][5][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author5NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][5][afflication]" type="text" class="form_width100" id="Author5Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">7</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="7"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][6][name1]" type="text" class="form_width100" id="Author6Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][6][name2]" type="text" class="form_width100" id="Author6Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][6][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author6NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][6][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author6NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][6][afflication]" type="text" class="form_width100" id="Author6Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">8</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="8"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][7][name1]" type="text" class="form_width100" id="Author7Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][7][name2]" type="text" class="form_width100" id="Author7Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][7][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author7NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][7][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author7NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][7][afflication]" type="text" class="form_width100" id="Author7Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">9</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="9"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][8][name1]" type="text" class="form_width100" id="Author8Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][8][name2]" type="text" class="form_width100" id="Author8Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][8][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author8NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][8][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author8NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][8][afflication]" type="text" class="form_width100" id="Author8Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">10</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="10"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][9][name1]" type="text" class="form_width100" id="Author9Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][9][name2]" type="text" class="form_width100" id="Author9Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][9][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author9NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][9][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author9NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][9][afflication]" type="text" class="form_width100" id="Author9Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">11</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="11"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][10][name1]" type="text" class="form_width100" id="Author10Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][10][name2]" type="text" class="form_width100" id="Author10Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][10][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author10NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][10][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author10NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][10][afflication]" type="text" class="form_width100" id="Author10Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">12</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="12"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][11][name1]" type="text" class="form_width100" id="Author11Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][11][name2]" type="text" class="form_width100" id="Author11Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][11][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author11NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][11][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author11NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][11][afflication]" type="text" class="form_width100" id="Author11Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">13</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="13"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][12][name1]" type="text" class="form_width100" id="Author12Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][12][name2]" type="text" class="form_width100" id="Author12Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][12][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author12NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][12][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author12NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][12][afflication]" type="text" class="form_width100" id="Author12Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">14</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="14"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][13][name1]" type="text" class="form_width100" id="Author13Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][13][name2]" type="text" class="form_width100" id="Author13Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][13][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author13NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][13][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author13NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][13][afflication]" type="text" class="form_width100" id="Author13Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">15</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="15"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][14][name1]" type="text" class="form_width100" id="Author14Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][14][name2]" type="text" class="form_width100" id="Author14Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][14][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author14NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][14][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author14NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][14][afflication]" type="text" class="form_width100" id="Author14Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">16</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="16"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][15][name1]" type="text" class="form_width100" id="Author15Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][15][name2]" type="text" class="form_width100" id="Author15Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][15][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author15NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][15][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author15NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][15][afflication]" type="text" class="form_width100" id="Author15Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">17</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="17"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][16][name1]" type="text" class="form_width100" id="Author16Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][16][name2]" type="text" class="form_width100" id="Author16Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][16][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author16NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][16][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author16NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][16][afflication]" type="text" class="form_width100" id="Author16Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">18</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="18"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][17][name1]" type="text" class="form_width100" id="Author17Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][17][name2]" type="text" class="form_width100" id="Author17Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][17][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author17NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][17][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author17NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][17][afflication]" type="text" class="form_width100" id="Author17Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">19</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="19"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][18][name1]" type="text" class="form_width100" id="Author18Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][18][name2]" type="text" class="form_width100" id="Author18Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][18][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author18NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][18][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author18NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][18][afflication]" type="text" class="form_width100" id="Author18Afflication">					</span></td>
+          </tr>
+                  <tr style="display: none;">
+            <td class="authorText">20</td>
+            <th class="th01"><input type="radio" name="data[Author][presenter]" value="20"></th>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][19][name1]" type="text" class="form_width100" id="Author19Name1">              </p></td>
+            <td class="td01 vtop"><span class="td01 pb10">
+					<input name="data[Author][19][name2]" type="text" class="form_width100" id="Author19Name2">					</span></td>
+            <td class="td03 vtop"><p class="ml10">
+                <input name="data[Author][19][name_roma1]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author19NameRoma1">              </p></td>
+            <td class="td01 vtop"><input name="data[Author][19][name_roma2]" type="text" onblur="inputCapitalize(this)" class="form_width100" id="Author19NameRoma2"></td>
+
+            <td class="td01 vtop"><span class="ml10">
+					<input name="data[Author][19][afflication]" type="text" class="form_width100" id="Author19Afflication">					</span></td>
+          </tr>
+        
+      </tbody></table>
+      <div class="bt02Out pb30">
+        <a href="javascript:;" class="btn01" id="add_author"><span class="btText">著者の入力欄を追加する</span></a>
+      </div>
+    </div>
+    <h2 class="mb15"><span class="h2Text">５．概要【必須】</span></h2>
+    <div class="ml35">
+      <div class="thesis">
+        <ul>
+          <li>■ 講演概要を記入して下さい．（300 字以内）</li>
+          <li>■ この概要は，プログラム編成時の参考資料としてのみ使用し，Web概要集や予稿集には収録いたしません．</li>
+
+        </ul>
+      </div>
+      <p class="mb15">
+        <textarea name="data[Post][abstract]" class="form03" cols="30" rows="6" id="PostAbstract"></textarea></p>
+    </div>
+    <h2 class="mb15"><span class="h2Text">６．キーワード（最低１つ入力してください）</span></h2>
+    <div class="ml35">
+      <div class="thesis">
+        <ul>
+          <li>■ 最大３個まで登録可能です．最低１個はご記入下さい．（３０文字以内）</li>
+        </ul>
+      </div>
+      <div id="selectKeyword">
+        <p class="textMark mb5">キーワード１【必須】</p>
+        <p class="text01 pb15">
+          <input name="data[Post][keyword1]" type="text" class="form01" id="PostKeyword1">        </p>
+        <p class="textMark mb5">キーワード２</p>
+        <p class="text01 pb15">
+          <input name="data[Post][keyword2]" type="text" class="form01" id="PostKeyword2">        </p>
+        <p class="textMark mb5">キーワード３</p>
+        <p class="text01 pb30">
+          <input name="data[Post][keyword3]" type="text" class="form01" id="PostKeyword3">        </p>
+      </div>
+
+    </div>
+
+    <h2 class="mb15"><span class="h2Text">７．ＳＩＣＥ学術奨励賞審査</span></h2>
+    <div class="ml35 pb30">
+      <div class="thesis pb10">
+        <ul>
+          <li>■（ 社）計測自動制御学会の規定による学術奨励賞の審査を希望する場合にはチェックして下さい．</li>
+          <li>■ 学術奨励賞の審査対象等の条件（年齢制限等）は<a href="http://www.sice.jp/about/awards/about_awards_rules.html" target="_blank">こちら</a>をご参照下さい．</li>
+          <li>■ 以下にチェックされ，審査条件を満たす方について，SICE本部の責任において審査を行います．</li>
+          <li>■ 著者情報欄の発表者をノミネート対象者とさせていただきます.</li>
+        </ul>
+      </div>
+      <input type="hidden" name="data[Post][award1]" id="PostAward1_" value="0"><input type="checkbox" name="data[Post][award1]" class="" value="1" id="PostAward1"><label for="PostAward1">&nbsp;学術奨励賞審査を希望する．</label>
+      <div>
+        <div style="display:none;margin-top:10px;margin-bottom:15px;" class="sice_data_name_wrp">
+          <div style="display:flex;">
+            <p><strong>発表者名：</strong></p>
+            <p class="sice_data_name_sei"></p>
+            <input type="hidden" name="data[Post][sice_data_name_sei]" id="sice_data_name_sei" value="">            <p class="sice_data_name_mei"></p>
+            <input type="hidden" name="data[Post][sice_data_name_mei]" id="sice_data_name_mei" value="">
+          </div>
+
+        </div>
+
+        <p class="sice_data_birth" style="display:none;">
+          <label for="sice_birth"><strong><span>【必須】</span>生年月日</strong></label><br>
+              <span style="display:block;margin-top:10px;margin-bottom:15px;">
+                <select name="data[Post][sice_data_year]" id="sice_data_year">
+<option value=""></option>
+<option value="0" selected="selected">----</option>
+<option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option></select>                <select name="data[Post][sice_data_month]" id="sice_data_month">
+<option value=""></option>
+<option value="0" selected="selected">--</option>
+<option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>                <select name="data[Post][sice_data_date]" id="sice_data_date">
+<option value=""></option>
+<option value="0" selected="selected">--</option>
+<option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>                              </span>
+
+        </p>
+
+          <input type="hidden" name="data[Post][sice_award_birth]" id="sice_award_birth">        <div class="form_si_table_wrp" style="display:none;">
+          <table>
+            <!-- 応募種別 -->
+            <tbody><tr>
+              <th><span>【必須】</span>応募種別</th>
+              <td>
+                  <div>
+                  <input type="radio" name="data[Post][award3]" id="PostAward3研究奨励賞学術研究関係発表時３０歳以下" class="award3_01" value="研究奨励賞 (学術研究関係，発表時３０歳以下)"><label for="PostAward3研究奨励賞学術研究関係発表時３０歳以下">研究奨励賞 (学術研究関係，発表時３０歳以下)</label>                </div>
+                <div>
+                <input type="radio" name="data[Post][award3]" id="PostAward3技術奨励賞技術開発関係発表時３５歳以下" class="award3_01" value="技術奨励賞 (技術開発関係，発表時３５歳以下)"><label for="PostAward3技術奨励賞技術開発関係発表時３５歳以下">技術奨励賞 (技術開発関係，発表時３５歳以下)</label>                </div>
+                              </td>
+            </tr>
+            <!-- 応募種別 -->
+
+            <!-- 所属学会名 -->
+            <tr>
+              <th><span>【必須】</span>所属学会名</th>
+              <td>
+              <select name="data[Post][society_name]" class="form_no_width" id="PostSocietyName">
+<option value="">選択してください</option>
+<option value="SICE">SICE</option>
+<option value="none">none</option>
+</select>
+              </td>
+            </tr>
+            <!-- 所属学会名 -->
+
+            <!-- 会員番号 -->
+            <tr class="sice_id_wrp" style="display:none;">
+              <th><span>【必須】</span>会員番号</th>
+              <td>
+                <input name="data[Post][sice_id]" type="text" class="sice_id" id="PostSiceId">              </td>
+            </tr>
+            <!-- 会員番号 -->
+
+            <!-- 分野 -->
+            <tr>
+              <th><span>【必須】</span>分野</th>
+              <td>
+               <select name="data[Post][field]" id="PostField">
+<option value="">選択してください</option>
+<option value="計測">計測</option>
+<option value="制御">制御</option>
+<option value="システム・情報">システム・情報</option>
+<option value="システムインテグレーション">システムインテグレーション</option>
+<option value="産業応用">産業応用</option>
+<option value="ライフエンジニアリング">ライフエンジニアリング</option>
+<option value="その他">その他（「分野詳細」欄に具体的に記載してください）</option>
+</select>
+              </td>
+            </tr>
+            <!-- 分野 -->
+
+            <!-- 分野詳細 -->
+            <tr>
+              <th>分野詳細</th>
+              <td>
+                <input name="data[Post][field_detail]" type="text" class="field_detail" id="PostFieldDetail">              </td>
+            </tr>
+            <!-- 分野詳細 -->
+
+            <!-- 応募理由（アピールポイントなど） -->
+            <tr class="reason_wrp">
+              <th><span>【必須】</span>応募理由（アピールポイントなど）</th>
+              <td>
+                <textarea name="data[Post][reason]" class="reason" cols="30" rows="6" id="PostReason"></textarea>              </td>
+            </tr>
+            <!-- 応募理由（アピールポイントなど） -->
+          </tbody></table>
+
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mb15"><span class="h2Text">８．ＳＩ部門賞（部門若手奨励賞）審査</span></h2>
+    <div class="ml35 pb30">
+      <div class="thesis pb10">
+        <ul>
+          <li>■（ 社）計測自動制御学会システムインテグレーションの規定による部門若手表彰の審査を希望する場合にはチェックして下さい．</li>
+          <li>■ 部門若手表彰の審査対象となる為には，35 歳以下（発表時）である必要があります．</li>
+          <li>■ その他，審査対象の条件等の詳細については，<a href="http://sice-si.org/wp-content/uploads/2015/09/SIawardKITEI2005.pdf" target="_blank">こちら</a>をご参照下さい．</li>
+          <li>■ 以下にチェックされ，審査条件を満たす方について，審査を行います．</li>
+          <li>■ 著者情報欄の発表者をノミネート対象者とさせていただきます.</li>
+        </ul>
+      </div>
+      <input type="hidden" name="data[Post][award2]" id="PostAward2_" value="0"><input type="checkbox" name="data[Post][award2]" class="" value="1" id="PostAward2"><label for="PostAward2">&nbsp;部門若手表彰審査を希望する．</label>      <div>
+        <div style="display:none;margin-top:10px;margin-bottom:15px;" class="data_name_wrp">
+          <div style="display:flex;">
+            <p><strong>発表者名：</strong></p>
+            <p class="data_name_sei"></p>
+            <input type="hidden" name="data[Post][data_name_sei]" id="data_name_sei" value="">            <p class="data_name_mei"></p>
+            <input type="hidden" name="data[Post][data_name_mei]" id="data_name_mei" value="">          </div>
+
+        </div>
+
+        <p class="data_birth" style="display:none;">
+          <label for="birth"><strong><span>【必須】</span>生年月日</strong></label><br>
+              <span style="display:block;margin-top:10px;margin-bottom:15px;">
+                <select name="data[Post][data_year]" id="data_year">
+<option value=""></option>
+<option value="0" selected="selected">----</option>
+<option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option></select>                <select name="data[Post][data_month]" id="data_month">
+<option value=""></option>
+<option value="0" selected="selected">--</option>
+<option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>                <select name="data[Post][data_date]" id="data_date">
+<option value=""></option>
+<option value="0" selected="selected">--</option>
+<option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>                              </span>
+
+        </p>
+          <input type="hidden" name="data[Post][award_birth]" id="award_birth">
+      </div>
+    </div>
+    <h2 class="mb15"><span class="h2Text">９．連絡先</span></h2>
+    <div class="ml35">
+      <div class="thesis pb10">
+        <ul>
+          <li>■ 原則として，以下に記入いただいたE-mail アドレス宛に連絡を差し上げます．</li>
+          <li>■ 連絡はE-mail を原則としますが，不慮の事態に備え郵便番号・所在地・電話番号等もご記入をお願いします．</li>
+          <li>■ E-mail アドレスは正確に半角で入力して下さい．</li>
+          <li>■ 内線番号、FAX 番号以外はすべて入力してください。</li>
+        </ul>
+      </div>
+      <p class="textMark mb10 mb15">氏名【必須】</p>
+      <div class="mb15">
+        <input name="data[Post][contact_name]" type="text" class="form01" id="PostContactName">      </div>
+      <p class="textMark mb10">郵便番号【必須】</p>
+      <p class="mb10 mb15">
+        <input name="data[Post][contact_zip1]" type="text" class="form05" style="ime-mode: inactive;" id="PostContactZip1">        -　
+        <input name="data[Post][contact_zip2]" type="text" class="form06" style="ime-mode: inactive;" id="PostContactZip2">              </p>
+
+      <p class="textMark mb10">所在地【必須】：（学生の場合は所属大学の住所などを記入してください，また郵便物が確実に届くように，所属，部署等までご記入下さい．）</p>
+      <div class="mb15">
+        <input name="data[Post][contact_address]" type="text" class="form01" id="PostContactAddress">      </div>
+      <p class="textMark mb10">連絡先所属【必須】：(学生の場合は所属大学の住所などを記入してください)</p>
+      <div class="mb15">
+        <input name="data[Post][contact_afflication]" type="text" class="form01" id="PostContactAfflication">      </div>
+      <p class="textMark mb10">TEL【必須】</p>
+      <p class="mb15 mb15">
+        <input name="data[Post][contact_phone]" type="text" class="form07" style="ime-mode: inactive;" id="PostContactPhone">        内線番号　
+        <input name="data[Post][contact_phone_extension]" type="text" class="form02" style="ime-mode: inactive;" id="PostContactPhoneExtension">      </p>
+      <p class="textMark mb10">FAX</p>
+      <div class="mb20">
+        <input name="data[Post][contact_fax]" type="text" class="form07" style="ime-mode: inactive;" id="PostContactFax">      </div>
+
+      <p class="textMark mb10 mb15">メールアドレス【必須】</p>
+      <div class="mb15">
+        <input name="data[Post][contact_mail]" type="text" class="form01" style="ime-mode: inactive;" id="PostContactMail">      </div>
+      <p class="textMark mb10">メールアドレス(確認用)</p>
+      <div class="mb15">
+        <input name="data[Post][contact_confirm]" type="text" onkeydown="StopPaste(event);" oncontextmenu="return false" onpaste="return false" class="form01" style="ime-mode: inactive;" id="PostContactConfirm">      </div>
+
+
+    </div>
+    <h2 class="mb15"><span class="h2Text">１０．通信欄</span></h2>
+    <div class="ml35 pb30">
+      <div class="thesis">
+        <ul>
+          <li>■ ご質問・ご要望などがありましたらご記入下さい．</li>
+          <li>■ 参加申込（入金や領収書）に関する連絡はここに記入せずに，参加登録の際に記入して下さい．</li>
+        </ul>
+      </div>
+      <textarea name="data[Post][message]" class="form03" cols="30" rows="6" id="PostMessage"></textarea>
+    </div>
+    <div class="bt01Out mb30"><a href="javascript:;" class="bt01"><span class="btText">入力内容の確認へ</span></a></div>
+  </div>
+<p id="footerMenu" class="pb10"><a href="http://si-divconf.web-concier.net/faq.html">FAQ</a> | <a href="http://si-divconf.web-concier.net/inquiry/">お問合せ</a></p>
+<div id="footer">
+  <p class="copyRight">Copyright © 2022 システムインテグレーション部門講演会 All Rights Reserved.</p>
+</div>
+
+  <div id="faceBoxIn"></div>
+  <input name="input_mode" type="hidden" value="">
+<input type="hidden" name="data[input_session_key]" value="user_post_input_data1661129736" id="input_session_key"><input type="hidden" name="data[mode]" value="confirm" id="mode"><input type="hidden" name="data[input_mode]" id="input_mode"></form><script>
+  $('#form1').on('submit',function(e){
+      if( !$('#streaming_check').prop('checked') ){
+       alert("発表のストリーミング配信に関しての了承にチェックされていません。");
+       return false;
+      }
+      return true;
+  });
+</script>
+
+<script src="./講演申込 _ si2022 講演申込・論文投稿ページ_files/form.js.ダウンロード"></script>
+
+
+</body></html>
