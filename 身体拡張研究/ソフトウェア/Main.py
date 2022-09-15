@@ -9,8 +9,8 @@ import threading
 import librosa
 import pyworld
 
-censor_words = ["被験者","被験者さん"] #検閲ワード1
-censor_words2 = ["協力者","協力者さん"] #検閲ワード2
+censor_words = ["では始めてください","でははじめてください","はじめてください","始めてください"] #検閲ワード1
+censor_words2 = ["終わってください","おわってください"] #検閲ワード2
 
 formant_conversion = False #フォルマント変換による音声加工
 def convert(signal):
@@ -331,8 +331,8 @@ if __name__ == "__main__": #importされた場合に実行しないようにす�
     #ストリーミングを始める
     af.stream.start_stream()
 
-    # ボリュームをゼロにする
-    aco.set_volume(0.0)
+    # ボリュームを1.0にする
+    aco.set_volume(1.0)
 
     # ノンブロッキングなのでこの中で音声認識・音の変換などを行う
     while af.stream.is_active():
