@@ -1,0 +1,134 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  sice-si.sty
+%  SICE-SI用スタイルファイル
+%  使い方  \documentclass[a4paper]{jarticle}
+%          \usepackage{sice-si}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%種々のスタイルファイルの読み込み%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ascmac}%
+
+\def\dopics{\par\vskip\parskip\centerline{\box\graph}}%\vskip\parskip}%
+\def\dopic{\par\vskip\parskip\centerline{\box\graph}\vskip\parskip\par}%
+
+%%%ページスタイル%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}%
+\raggedbottom%
+
+%%% 参考文献の設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewenvironment{thebibliography}[1]
+{\section*{\refname\@mkboth{\refname}{\refname}}%
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+       {\settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+ \setlength\itemsep{-0.5zh}%←ここの数値を調整(行間のつまり具合)
+ \setlength\baselineskip{10pt}%←ここの数値を調整（追加）(文字の大きさ)
+        \@openbib@code
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty\clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}
+ {\def\@noitemerr
+   {\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist}
+%%%マージンの設定%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{250mm}
+\setlength{\textwidth}{180mm}
+\setlength{\columnsep}{10mm}
+
+%%%文字間隔，行送りの設定%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\kanjiskip = -0.05zw plus 0.1zw %minus 0.05zw
+\renewcommand{\baselinestretch}{1.0}
+
+%%% 字下げは漢字１文字%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parindent = 1zw%
+
+%%% アイテムのフォント%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\renewcommand{\labelenumii}{(\alph{enumii})}
+\renewcommand{\labelitemi}{・}
+\renewcommand{\labelitemii}{\bf --}
+\renewcommand{\labelitemiii}{*}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\bottomfraction}{1.0}
+
+%%% 章，節のフォント%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+   {1.5\Cvs \@plus.5\Cvs \@minus.2\Cvs}%
+   {.5\Cvs \@plus.3\Cvs}%
+   {\reset@font\large\bfseries}}%2019年変更:sectionフォントをlarge[12pt]に設定
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection \arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+%%% 図番，表番%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\fnum@figure{Fig. \thefigure}  %図 -> fig.
+\def\fnum@table{Table \thetable}  %表 -> Table %2019修正
+
+%%%タイトルコマンドの制作%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\maketitle{%
+  \par%
+  \begingroup%
+    \def\thefootnote{\fnsymbol{footnote}}%
+    \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}}%
+    \if@twocolumn \twocolumn[\@maketitle]%
+    \else%
+      \newpage%
+      \global\@topnum\z@%
+      \@maketitle%
+    \fi%
+    \thispagestyle{empty}%
+    \@thanks%
+  \endgroup%
+  \setcounter{footnote}{0}%
+  \let\maketitle=\relax%
+  \let\@maketitle=\relax%
+  \gdef\@title{}%
+  \gdef\@etitle{}%
+  \gdef\@lab{}%
+  \gdef\@abst{}%
+  \gdef\@name{}%
+  \gdef\@ename{}%
+}%
+
+\def\@maketitle{%
+  \twocolumn[
+  %\newpage%
+  \null%
+  \vskip 1em%
+  \begin{center}%
+      {\fontsize{16pt}{20pt}\selectfont \bf \@title\par}%
+    %\vspace*{1em}%
+    {\fontsize{12pt}{20pt}\selectfont \@name \par}
+    \vspace*{1em}%
+      {\fontsize{16pt}{20pt}\selectfont \bf \@etitle\par}%
+    %\vspace*{1em}%
+    {\fontsize{12pt}{20pt}\selectfont \@ename \par}
+    \vspace*{1em}%
+  \end{center}%
+  \begin{center}
+   \begin{minipage}{160mm}
+    \fontsize{9pt}{0pt}\selectfont
+    {Abstract : \@abst \par}
+   \end{minipage}
+  \end{center}
+  \vskip 1em%
+  ]
+}%
+\def\title#1{\long\gdef\@title{#1}}%
+\def\etitle#1{\long\gdef\@etitle{#1}}%
+\def\abst#1{\long\gdef\@abst{#1}}%
+\def\name#1{\long\gdef\@name{#1}}%
+\def\ename#1{\long\gdef\@ename{#1}}%
+

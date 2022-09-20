@@ -1,0 +1,76 @@
+\documentclass[a4paper]{jarticle}
+\usepackage{sice-si}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+
+
+\begin{document}
+%
+% タイトルと著者名
+\title{SICE SI 予稿原稿の書き方（サンプル）} % 和文タイトル
+\name{○計測　太郎（計測自動制御学会），制御　花子（計測自動制御学会）} % 著者名
+\etitle{Instruction for SICE SI Annual Conference Manuscript} % 英文タイトル
+\ename{○Taro KEISOKU (SICE), and Hanako SEIGYO (SICE)}	%著者名（英）
+%
+% アブストラクト
+\abst{
+This manuscript describes a method for preparing a manuscript for the annual conference of the SICE SI division. 
+}
+% タイトルの出力
+\maketitle
+%
+% 本文
+\section{緒言}
+本稿では SICE SI 部門講演会 SI の予稿原稿を作成するための説明を行います．
+SIでは予稿原稿としてPDFファイル形式のファイルを電子投稿していただくことを原則とさせていただいております．
+ただし，電子化やネットワーク接続が困難な場合には個別に対応させていただきますので，プログラム委員会までご相談ください(Webサイトからお問い合わせできます)．
+%
+\section{原稿作成方法}
+\subsection{原稿枚数，ファイル形式とファイル容量}
+原稿は1講演につき1ページから最大6ページとなります（キーノート講演も同様です）．
+提出していただく原稿のファイル形式は原則としてPDF形式といたします．
+PDF形式とすることが不可能な場合には，プログラム委員会にご連絡ください．
+また，原稿完成時のファイルサイズはPDF形式で2MB程度を上限の目安とさせていただきます．
+原稿送付時にはそれ以上でも受付可能な場合がありますが，その場合には全体の原稿の総容量により再提出をお願いする場合がありますので，ご了承ください．
+%
+\subsection{用紙サイズ，書式など}
+\subsubsection{原稿の体裁}
+用紙サイズはA4版(縦297mm$\times$横210mm)とし，余白部分は左右15mm，上20mm，下27mmを確保してください．（プログラム委員会でヘッダ・フッダ部分に情報を追加する予定ですので，ご注意ください．）
+よって，原稿作成領域は250mm$\times$180mmの枠内となります．
+%
+\subsubsection{基本書式}
+原稿の記載内容は，下記の順序とします．
+\begin{enumerate}
+\setlength{\parskip}{0cm} % 段落間詰める
+\setlength{\itemsep}{0cm} % 項目間詰める
+\item[1)] 和文題目（英文原稿の場合には不要，16ptゴシックフォント推奨，センタリング）
+\item[2)] 和文著者名・所属（英文原稿の場合には不要，12pt明朝フォント推奨，センタリング，登壇者に○を付加）
+\item[3)] 英文題目（16pt Times-Roman Bold推奨，センタリング）
+\item[4)] 英文著者名・所属（12pt Times-Roman推奨，センタリング，登壇者に○を付加）
+\item[5)] 英文アブストラクト（9pt Times-Roman推奨，3 〜 5行程度，文章両側を10mm程度インデント）
+\item[6)] 本文（本文文章は10pt明朝フォント推奨，小見出しは12 〜 10pt程度のゴシックフォント推奨）
+\item[7)] 参考文献（10pt明朝フォント推奨）
+\end{enumerate}
+\subsubsection{図と表について}
+予稿はPDFファイルとなりますので，図や表はカラーで作成していただいても構いません．
+ただしファイルサイズの制限にご注意ください．
+図のキャプションは図の下にFig.1，Fig.2という具合に，表のキャプションは表の上にTable 1，Table 2という具合にお付けください．（英語表記，フォントは10pt Times-Roman推奨）
+%
+\section{結言}
+本稿はあくまでも予稿原稿を作成するためのガイドラインを示したものです．改行幅やフォントの設定などについては，原稿の内容や量に合わせて適宜判断していただき，原稿を作成してください．
+また，本稿はSICE-SIの予稿原稿の書き方\cite{SI}を参考に，\TeX 用書式を用意したものです．適宜sice-si.styを変更して使用してください．
+%
+%
+%参考文献
+\begin{thebibliography}{99}
+\bibitem{SI}
+	計測太郎，制御花子：
+	``SICE SI予稿原稿の書き方（サンプル）'',  
+   {\it 計測自動制御学会SI部門講演会SICE-SI予稿集}, 
+    pp.0000--0000 (20??)
+\end{thebibliography}
+%
+%
+%
+\end{document}
+
