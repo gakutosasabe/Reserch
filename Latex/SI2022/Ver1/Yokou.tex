@@ -25,8 +25,8 @@ When we obtain information visually, it is possible to filter only the informati
 SIでは予稿原稿としてPDFファイル形式のファイルを電子投稿していただくことを原則とさせていただいております．
 ただし，電子化やネットワーク接続が困難な場合には個別に対応させていただきますので，プログラム委員会までご相談ください(Webサイトからお問い合わせできます)．
 %
-\section{自動ゲイン調整システム}
-\subsection{システムの構成}
+\section{自動ゲイン調整装置}
+\subsection{装置の構成}
 \begin{figure}[htbp]
     \begin{center}
     \includegraphics[width=80mm]{system.PNG}
@@ -34,7 +34,15 @@ SIでは予稿原稿としてPDFファイル形式のファイルを電子投稿
     \label{fig:system}
     \end{center}
     \end{figure}
-本稿で使用したシステムの構成をFig.\ref{fig:system}に示す
+本稿で使用した装置の構成をFig.\ref{fig:system}に示す.
+本装置はワイヤレスノイズキャンセリングヘッドフォン，PC，マイクによって構成される．
+PCの中に，Pythonで書かれたシステムが搭載されており，これによってマイクからの音に対して自動でゲイン調整を行う．
+以下に，マイクから音を拾って，ユーザーがゲイン調整された音を聞くまでのシステム内の流れを示す．
+まず，外界からの音をマイクによって拾い，Google社のSpeech recogntionによってノイズ処理と音声のテキスト化が行われる．
+次に，生成されたテキストは検閲ワード検索クラスに送られ，あらかじめ設定された検閲ワードがテキスト中に含まれていないかどうか検索が行われる．
+もし，テキスト中に検閲ワードが含まれていた場合は，「検閲ワードあり」の情報がゲイン調整クラスに送られる．
+一方で，外界からの音はPythonライブラリであるPyaudioによってチャンクごとの音声データに分けられる．（Fig.\ref{fig:system}の上部分）
+
     
 \section{ゲイン調整システムの検証実験}
 \subsection{システムによる音のカットの確認}
