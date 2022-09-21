@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.9.20)  21 SEP 2022 08:55
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.9.20)  22 SEP 2022 00:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -182,13 +182,16 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 File: system.PNG Graphic file (type bmp)
 <system.PNG>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 53.
 [1
 
+
+]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 76.
+ [2
 
 ] (./Yokou.aux)
 
@@ -199,10 +202,10 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  1823 strings out of 476982
  28258 string characters out of 5827491
- 384141 words of memory out of 5000000
+ 388141 words of memory out of 5000000
  23347 multiletter control sequences out of 15000+600000
  477233 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  55i,5n,62p,890b,335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Yokou.dvi (1 page, 4292 bytes).
+Output written on Yokou.dvi (2 pages, 8392 bytes).
