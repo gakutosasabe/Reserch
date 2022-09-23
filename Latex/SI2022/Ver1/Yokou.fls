@@ -1,8 +1,8 @@
-PWD c:/Users/GakutoSasabe/Documents/Reserch/Latex/SI2022/Ver1
+PWD c:/Users/user/Desktop/Reserch/Latex/SI2022/Ver1
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt
-INPUT c:/Users/GakutoSasabe/Documents/Reserch/Latex/SI2022/Ver1/Yokou.tex
+INPUT c:/Users/user/Desktop/Reserch/Latex/SI2022/Ver1/Yokou.tex
 OUTPUT Yokou.log
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
@@ -198,7 +198,7 @@ INPUT ./system.PNG
 INPUT ./system.PNG
 INPUT system.PNG
 INPUT extractbb -B cropbox -O system.PNG
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT Yokou.dvi
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT Yokou.aux
