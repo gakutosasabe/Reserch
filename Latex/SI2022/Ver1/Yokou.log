@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.9.20)  25 SEP 2022 02:35
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.9.23)  25 SEP 2022 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/GakutoSasabe/Documents/Reserch/Latex/SI2022/Ver1/Yokou.tex
-(c:/Users/GakutoSasabe/Documents/Reserch/Latex/SI2022/Ver1/Yokou.tex
+**c:/Users/user/Desktop/Reserch/Latex/SI2022/Ver1/Yokou.tex
+(c:/Users/user/Desktop/Reserch/Latex/SI2022/Ver1/Yokou.tex
 pLaTeX2e <2021-11-15> (based on LaTeX2e <2022-06-01> patch level 5)
 L3 programming layer <2022-08-30> (c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 Document Class: jarticle 2020/09/30 v1.8f Standard pLaTeX class
@@ -208,11 +208,11 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  1833 strings out of 476982
- 28447 string characters out of 5827491
+ 28417 string characters out of 5827491
  390141 words of memory out of 5000000
  23354 multiletter control sequences out of 15000+600000
  477233 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,10n,62p,890b,335s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,10n,62p,880b,335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Yokou.dvi (3 pages, 22212 bytes).
