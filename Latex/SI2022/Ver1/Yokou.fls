@@ -1,8 +1,8 @@
-PWD c:/Users/user/Desktop/Reserch/Latex/SI2022/Ver1
+PWD c:/Users/GakutoSasabe/Documents/Reserch/Latex/SI2022/Ver1
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt
-INPUT c:/Users/user/Desktop/Reserch/Latex/SI2022/Ver1/Yokou.tex
+INPUT c:/Users/GakutoSasabe/Documents/Reserch/Latex/SI2022/Ver1/Yokou.tex
 OUTPUT Yokou.log
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
@@ -200,10 +200,14 @@ INPUT system.PNG
 INPUT extractbb -B cropbox -O system.PNG
 OUTPUT Yokou.dvi
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT ./voice.PNG
-INPUT ./voice.PNG
-INPUT voice.PNG
-INPUT extractbb -B cropbox -O voice.PNG
+INPUT ./voice2.PNG
+INPUT ./voice2.PNG
+INPUT voice2.PNG
+INPUT extractbb -B cropbox -O voice2.PNG
+INPUT ./outersound.PNG
+INPUT ./outersound.PNG
+INPUT outersound.PNG
+INPUT extractbb -B cropbox -O outersound.PNG
 INPUT ./configuration.jpg
 INPUT ./configuration.jpg
 INPUT configuration.jpg

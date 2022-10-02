@@ -66,17 +66,25 @@ PCには，Pythonにより記述されたシステムが搭載されており，
 実験者は装置を装着した実験参加者に対して，「始めてください」と言ったのち，実験参加者に対して30秒ごとに設定キーワードの含まれない言葉で声かけを行い，開始から3分後「終わってください」と声をかける．
 \subsubsection{実験結果}
 装置を装着した実験参加者に対して実験者から「始めてください」と発話した後，「終わってください」と発話するまでに装置を通してユーザーに届いた音声波形をFig.\ref{fig:voice}に示す
-（ヘッドフォンの右のスピーカーから流れた音声の波形がFig.\ref{fig:voice}の上半分，左のスピーカーから流れた音声の波形がFig.\ref{fig:voice}の下半分である）．
 横軸が時間，縦軸が音声の振幅を示している．
-Fig.\ref{fig:voice}を見ると実験者からの「始めてください」の声を検出してから「終わってください」の声を検出する間に発せられた声かけは完全にカットされていることがわかる．
-また，「終わってください」の言葉を検出した以降はゲインを100％に戻し，全く音声をカットしていないことがわかる．
+また，同じ時間帯にFig.\ref{fig:env}のカメラで録音した，実験環境内の音声波形をFig.\ref{fig:outsidesound}に示す．
+Fig.\ref{fig:voice}とFig.\ref{fig:outsidesound}を見ると実験者からの「始めてください」の声を検出してから「終わってください」の声を検出する間に発せられたアドバイスや環境音は完全にカットされていることがわかる．
+
 \begin{figure}[htbp]
   \begin{center}
-  \includegraphics[width=90mm]{voice.PNG}
+  \includegraphics[width=90mm]{voice2.PNG}
   \caption{Audio waveform during automatic gain adjustment}
   \label{fig:voice}
   \end{center}
   \end{figure}
+
+  \begin{figure}[htbp]
+    \begin{center}
+    \includegraphics[width=90mm]{outersound.PNG}
+    \caption{Audio waveform during automatic gain adjustment(outside sound)}
+    \label{fig:outsidesound}
+    \end{center}
+    \end{figure}
 \subsection{ユーザーのタスク遂行に与える影響}
 \subsubsection{実験概要}
 提案装置による音声の自動ゲイン調整がユーザーのタスク遂行に与える影響を調べるため，Alternative Uses Test\cite{AUT}を行った．
@@ -99,6 +107,7 @@ AUT実施後，AUT結果から各実験参加者の実験結果による創造�
 提案装置は，作業者に対して話しかける人の音声をカットすることによって作業者の集中力を高めることを狙いとしている．
 そこで本実験では，AUTの最中に実験者が実験参加者に口頭で代替用途を発案させるためのアドバイスを行うこととする．
 本稿では18歳以上40歳未満の4人の男女（男性：3名，女性1名）に対して本検証実験を行った際の結果について報告する．
+
 \subsubsection{実験環境}
 実験は対面で行い，実験者と実験参加者が机を挟んで対面で着席する状況で行われる（Fig.\ref{fig:env}）．
 実験中における各人の身体運動（頭部および胸部運動）は実験参加者から見て左斜め前方に設置されたビデオカメラ（DJI製 Osmo Pocket)により記録する．
