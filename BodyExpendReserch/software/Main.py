@@ -12,12 +12,12 @@ from pydub import AudioSegment
 from pydub.playback import play
 
 # システム適用条件
-# censor_words = ["終わってください","おわってください"] #検閲ワード・全透
-# censor_words2 = ["では始めてください","でははじめてください","はじめてください","始めてください"] #検閲ワード・消音
+censor_words = ["終わってください","おわってください"] #検閲ワード・全透
+censor_words2 = ["では始めてください","でははじめてください","はじめてください","始めてください"] #検閲ワード・消音
 
 # システム非適用条件
-censor_words = ["では始めてください","でははじめてください","はじめてください","始めてください"]#検閲ワード・全透
-censor_words2 = [] #検閲ワード・消音
+# censor_words = ["では始めてください","でははじめてください","はじめてください","始めてください"]#検閲ワード・全透
+# censor_words2 = [] #検閲ワード・消音
 
 formant_conversion = False #フォルマント変換による音声加工
 def convert(signal):
