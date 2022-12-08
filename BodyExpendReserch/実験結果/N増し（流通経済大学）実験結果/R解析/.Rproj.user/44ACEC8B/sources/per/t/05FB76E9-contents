@@ -1,0 +1,274 @@
+#ID2読み込み
+ID2_BallPen <- read.table(
+  file = "ID2_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID2_BallPen_head <- ID2_BallPen[, 1]
+ID2_BallPen_chest <- ID2_BallPen[, 2]
+ID2_BallPen_arm <- ID2_BallPen[, 3]
+
+ID2_Socks <- read.table(
+  file = "ID2_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+#ID3読み込み
+ID3_BallPen <- read.table(
+  file = "ID3_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID3_BallPen_head <- ID3_BallPen[, 1]
+ID3_BallPen_chest <- ID3_BallPen[, 2]
+ID3_BallPen_arm <- ID3_BallPen[, 3]
+
+ID3_Socks <- read.table(
+  file = "ID3_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID3_Socks_head <- ID3_Socks[, 1]
+ID3_Socks_chest <- ID3_Socks[, 2]
+ID3_Socks_arm <- ID3_Socks[, 3]
+
+#ID4読み込み
+ID4_BallPen <- read.table(
+  file = "ID4_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID4_BallPen_head <- ID4_BallPen[, 1]
+ID4_BallPen_chest <- ID4_BallPen[, 2]
+ID4_BallPen_arm <- ID4_BallPen[, 3]
+
+ID4_Socks <- read.table(
+  file = "ID4_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID4_Socks_head <- ID4_Socks[, 1]
+ID4_Socks_chest <- ID4_Socks[, 2]
+ID4_Socks_arm <- ID4_Socks[, 3]
+
+#ID5読み込み
+ID5_BallPen <- read.table(
+  file = "ID5_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID5_BallPen_head <- ID5_BallPen[, 1]
+ID5_BallPen_chest <- ID5_BallPen[, 2]
+ID5_BallPen_arm <- ID5_BallPen[, 3]
+
+ID5_Socks <- read.table(
+  file = "ID5_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID5_Socks_head <- ID5_Socks[, 1]
+ID5_Socks_chest <- ID5_Socks[, 2]
+ID5_Socks_arm <- ID5_Socks[, 3]
+
+#ID6読み込み
+ID6_BallPen <- read.table(
+  file = "ID6_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID6_BallPen_head <- ID6_BallPen[, 1]
+ID6_BallPen_chest <- ID6_BallPen[, 2]
+ID6_BallPen_arm <- ID6_BallPen[, 3]
+
+ID6_Socks <- read.table(
+  file = "ID6_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID6_Socks_head <- ID6_Socks[, 1]
+ID6_Socks_chest <- ID6_Socks[, 2]
+ID6_Socks_arm <- ID6_Socks[, 3]
+
+#ID7読み込み
+ID7_BallPen <- read.table(
+  file = "ID7_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID7_BallPen_head <- ID7_BallPen[, 1]
+ID7_BallPen_chest <- ID7_BallPen[, 2]
+ID7_BallPen_arm <- ID7_BallPen[, 3]
+
+ID7_Socks <- read.table(
+  file = "ID7_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID7_Socks_head <- ID7_Socks[, 1]
+ID7_Socks_chest <- ID7_Socks[, 2]
+ID7_Socks_arm <- ID7_Socks[, 3]
+
+#ID8読み込み
+ID8_BallPen <- read.table(
+  file = "ID8_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID8_BallPen_head <- ID8_BallPen[, 1]
+ID8_BallPen_chest <- ID8_BallPen[, 2]
+ID8_BallPen_arm <- ID8_BallPen[, 3]
+
+ID8_Socks <- read.table(
+  file = "ID8_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID8_Socks_head <- ID8_Socks[, 1]
+ID8_Socks_chest <- ID8_Socks[, 2]
+ID8_Socks_arm <- ID8_Socks[, 3]
+
+#ID9読み込み
+ID9_BallPen <- read.table(
+  file = "ID9_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID9_BallPen_head <- ID9_BallPen[, 1]
+ID9_BallPen_chest <- ID9_BallPen[, 2]
+ID9_BallPen_arm <- ID9_BallPen[, 3]
+
+ID9_Socks <- read.table(
+  file = "ID9_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID9_Socks_head <- ID9_Socks[, 1]
+ID9_Socks_chest <- ID9_Socks[, 2]
+ID9_Socks_arm <- ID9_Socks[, 3]
+
+#ID10読み込み
+ID10_BallPen <- read.table(
+  file = "ID10_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID10_BallPen_head <- ID10_BallPen[, 1]
+ID10_BallPen_chest <- ID10_BallPen[, 2]
+ID10_BallPen_arm <- ID10_BallPen[, 3]
+
+ID10_Socks <- read.table(
+  file = "ID10_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID10_Socks_head <- ID10_Socks[, 1]
+ID10_Socks_chest <- ID10_Socks[, 2]
+ID10_Socks_arm <- ID10_Socks[, 3]
+
+#ID11読み込み
+ID11_BallPen <- read.table(
+  file = "ID11_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID11_BallPen_head <- ID11_BallPen[, 1]
+ID11_BallPen_chest <- ID11_BallPen[, 2]
+ID11_BallPen_arm <- ID11_BallPen[, 3]
+
+ID11_Socks <- read.table(
+  file = "ID11_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID11_Socks_head <- ID11_Socks[, 1]
+ID11_Socks_chest <- ID11_Socks[, 2]
+ID11_Socks_arm <- ID11_Socks[, 3]
+
+#ID12読み込み
+ID12_BallPen <- read.table(
+  file = "ID12_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID12_BallPen_head <- ID12_BallPen[, 1]
+ID12_BallPen_chest <- ID12_BallPen[, 2]
+ID12_BallPen_arm <- ID12_BallPen[, 3]
+
+ID12_Socks <- read.table(
+  file = "ID12_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID12_Socks_head <- ID12_Socks[, 1]
+ID12_Socks_chest <- ID12_Socks[, 2]
+ID12_Socks_arm <- ID12_Socks[, 3]
+
+#ID13読み込み
+ID13_BallPen <- read.table(
+  file = "ID13_BallPen.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID13_BallPen_head <- ID13_BallPen[, 1]
+ID13_BallPen_chest <- ID13_BallPen[, 2]
+ID13_BallPen_arm <- ID13_Bal
+lPen[, 3]
+
+ID13_Socks <- read.table(
+  file = "ID13_Socks.txt",
+  header = TRUE,
+  sep = "",
+  skip = 0
+)
+
+ID13_Socks_head <- ID13_Socks[, 1]
+ID13_Socks_chest <- ID13_Socks[, 2]
+ID13_Socks_arm <- ID13_Socks[, 3]
+
+ts.plot(ID8_Socks_head)
