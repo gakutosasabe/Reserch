@@ -275,3 +275,8 @@ BallPen_Strong <- c(ID2_BallPen_head,ID3_BallPen_head,ID4_BallPen_head,ID5_BallP
 BallPen_Weak <- c(ID8_BallPen_head,ID9_BallPen_head,ID10_BallPen_head,ID11_BallPen_head,ID12_BallPen_head)
 
 t.test(BallPen_Strong, BallPen_Weak)
+
+Socks_Strong <- c(ID2_Socks_head,ID3_Socks_head,ID4_Socks_head,ID5_Socks_head,ID6_Socks_head)
+Socks_Weak <- c(ID8_Socks_head,ID9_Socks_head,ID10_Socks_head,ID11_Socks_head,ID12_Socks_head)
+
+t.test(Socks_Strong, Socks_Weak)
