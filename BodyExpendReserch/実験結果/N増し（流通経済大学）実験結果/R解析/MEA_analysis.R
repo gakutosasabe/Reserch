@@ -1,7 +1,7 @@
 ## ファイル読み込み
 #関数の定義
 moving_average <- function(x){
-  filter(x, rep(1,50)) / 50
+  filter(x, rep(1,20)) / 20
 }
 
 
@@ -20,7 +20,7 @@ ID2_BallPen_head <- (ID2_BallPen_head_raw - min(ID2_BallPen[, 1])) / (max(ID2_Ba
 
 # コレログラム可視化
 IDacf_data <- acf(ID2_BallPen_head)
-ts.plot(acf_data)
+ts.plot(ID2_BallPen_head)
 
 #移動平均
 ID2_BallPen_head <- moving_average(ID2_BallPen_head)
