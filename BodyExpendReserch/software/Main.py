@@ -8,8 +8,6 @@ from scipy.stats import norm
 import threading
 import librosa
 import pyworld
-from pydub import AudioSegment
-from pydub.playback import play
 
 # システム適用条件
 censor_words = ["終わってください","おわってください"] #検閲ワード・全透
