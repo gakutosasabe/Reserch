@@ -16,7 +16,7 @@ data = wav.readframes(wav.getnframes())
 data = np.frombuffer(data, dtype=np.int16)
 
 #短時間フーリエ変換を行う
-#f,t,stft_data = sp.stft(data, fs=wav.getframerate(),window="hann",nperseg= 512, noverlap= 256)
+f,t,stft_data = sp.stft(data, fs=wav.getframerate(),window="hann",nperseg= 512, noverlap= 256)
 
 #短時間フーリエ変換後のデータ形式を確認
 #print("短時間フーリエ変換後のshape",np.shape(stft_data))
@@ -24,21 +24,20 @@ data = np.frombuffer(data, dtype=np.int16)
 #print("周波数軸[Hz]:", f)
 #print("時間軸[sec]", t)
 
-fig = plt.figure(figsize=(10,4))
+#特定の周波数を消す
+stft_data[100:,:]=0
 
-#スペクトログラムを表示する
-spectrum,  freqs, t, im=plt.specgram(data,NFFT=512,noverlap=512//16*15,Fs=wav.getframerate(),cmap="gray")
+#時間領域の波形に戻す
+t, data_post = sp.istft(stft_data, fs = wav.getframerate(), window="hann", nperseg=512, noverlap= 256)
 
+#2バイトのデータに変換
+data_post = data_post.astype(np.int16)
 
-fig.colorbar(im).set_label('Intensity[db]')
-
-plt.xlabel("Time[sec]")
-
-plt.ylabel("Frequency[Hz]")
-
-#plt.savefig("./spectrogram.png")
-
-plt.show()
-
+#wavファイルに書き込む
+wave_out = wave.open("./istft_post_wave.wav", "w")
+wave_out.setnchannels(1)
+wave_out.setsampwidth(2)
+wave_out.setframerate(wav.getframerate())
+wave_out.writeframes(data_post)
+wave_out.close()
 wav.close()
-
