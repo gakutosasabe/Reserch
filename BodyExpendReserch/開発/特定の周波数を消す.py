@@ -25,7 +25,7 @@ f,t,stft_data = sp.stft(data, fs=wav.getframerate(),window="hann",nperseg= 512, 
 #print("時間軸[sec]", t)
 
 #特定の周波数を消す
-stft_data[100:,:]=0
+stft_data[:50,:]=0
 
 #時間領域の波形に戻す
 t, data_post = sp.istft(stft_data, fs = wav.getframerate(), window="hann", nperseg=512, noverlap= 256)
