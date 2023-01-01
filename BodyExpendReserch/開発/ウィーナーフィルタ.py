@@ -15,6 +15,7 @@ data = wav.readframes(wav.getnframes())
 #dataを2バイトの数値列に変換
 data = np.frombuffer(data, dtype=np.int16)
 
+
 sampling_rate = wav.getframerate()
 
 speech_signal = data
@@ -51,9 +52,10 @@ status = sd.wait()
 
 #短時間フーリエ変換を行う
 f,t,stft_data = sp.stft(mix_signal, fs=wav.getframerate(),window="hann", nperseg =512, noverlap=256)
-
+print(stft_data)
 #入力信号の振幅を取得
 amp = np.abs(stft_data)
+
 
 #入力信号のパワーを取得
 input_power = np.power(amp,2.0)
