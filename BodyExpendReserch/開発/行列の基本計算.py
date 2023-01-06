@@ -35,3 +35,9 @@ print("A*B= \n", np.multiply(A,B))
 print("A^T= \n",A.T)
 print("A^T= \n",np.transpose(A,axes=(1,0)))
 print("A^T= \n",np.swapaxes(A,1,0))
+
+#複素行列のエルミート転置
+A=np.matrix([[3.,1.+ 2.j, 2. + 3.j],[2., 3.-4.j, 3.j]])
+print("A=",A)
+print("A^H= \n", A.H)
+print("A^H = \n",np.swapaxes(np.conjugate(A),1,0))
