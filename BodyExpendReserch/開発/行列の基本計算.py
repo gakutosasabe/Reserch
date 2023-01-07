@@ -41,3 +41,13 @@ A=np.matrix([[3.,1.+ 2.j, 2. + 3.j],[2., 3.-4.j, 3.j]])
 print("A=",A)
 print("A^H= \n", A.H)
 print("A^H = \n",np.swapaxes(np.conjugate(A),1,0))
+
+#行列の席に対するエルミート転置
+A=np.matrix([[3.,1.+2.j,2.+3.j],[2.,3.-4j,1.+3.j]])
+B=np.matrix([[4.+4.j,2.-3.j],[-1.+1.j,3.-2.j],[1.+3.j,5.+5.j]])
+print("(AB)^H = \n",(np.matmul(A,B).H))
+print("(AB)^H = \n",np.matmul(B.H,A.H))
+
+#単位行列の定義
+I = np.eye(N=3)
+print("I=\n", I)
