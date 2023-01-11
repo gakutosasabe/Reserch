@@ -19,3 +19,31 @@ B=np.reshape(B,(K,R,N))
 #einsumを使って行列積を計算する
 C=np.einsum("lkmr,krn->lkmn", A,B)
 
+#行列Cの大きさを表示
+print("shape(C):", np.shape(C))
+
+#l=0,k=0の要素について検算実施
+print("A(0,0)B(0,0)=\n", np.matmul(A[0,0,...],B[0,...]))
+print("C(0,0)=\n", C[0,0,...])
+
+#einsumを使って行列積をl,k毎に計算した後かつ，l方向に和を取る
+C=np.einsum("lkmr,krn -> kmn",A,B)
+
+#行列Cの大きさを表示
+print("shpe(C):",np.shape(C))
+
+#k=0の要素について検算実施
+for l in range(L):
+    if l==0:
+        C_2=np.matmul(A[l,0,...],B[0,...])
+    else:
+        C_2=C_2+np.matmul(A[l,0,...],B[0,...])
+        
+print("C_2(0)=\n",C_2)
+print("C(0)=\n",C[0,...])
+
+#einsumを使ってアダマール積を計算する
+c=np.einsum("lkmn,kmn->lkmn", A,B)
+
+#行列Cの大きさを表示
+print("shape(C):",np.shape(C))
