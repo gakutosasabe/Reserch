@@ -4,10 +4,10 @@ import numpy as np
 np.random.seed(0)
 
 #行列の大きさを設定
-L=1
-M=2
-N=2
-
+L=2
+M=3
+N=1
 #ランダムな複素数のテンソルを定義する
-A=np.random.uniform(size = L*M*N) + np.random.uniform(size = L*M*N)* 1.j
+A=np.random.uniform(size = L*M*N)
+A=np.reshape(A,(L,M))
 print(A)
