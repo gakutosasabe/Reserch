@@ -24,4 +24,20 @@ det3A = np.linalg.det(3*A)
 A_inv = np.linalg.inv(A)
 
 #Aとかけて単位行列になっているかどうかを検算
-AA_inv = np.einsum()
+AA_inv = np.einsum("lmk,lkn ->lmn",A,A_inv)
+print("単位行列?:\n",AA_inv[0])
+
+A_invA=np.einsum("lmk,lkn -> lmn",A_inv,A)
+print("単位行列？:\n",A_invA[0])
+
+#一般化逆行列計算
+A_inv=np.linalg.pinv(A)
+
+#Aとかけて単位行列になっているかどうかを検算
+AA_inv = np.einsum("lmk,lkn ->lmn",A,A_inv)
+print("単位行列?:\n",AA_inv[0])
+
+A_invA=np.einsum("lmk,lkn -> lmn",A_inv,A)
+print("単位行列？:\n",A_invA[0])
+
+
