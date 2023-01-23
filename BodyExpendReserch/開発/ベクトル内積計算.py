@@ -4,4 +4,10 @@ import numpy as np
 a=np.matrix([3. +2.j,1.-1.j,2.+2.j])
 
 #ベクトルを定義
-b=np.array([])
+b=np.array([2. +5.j,1.-1.j,4.+1.j])
+
+#ベクトルの内積
+print("a^Hb=",np.inner(np.conjugate(a),b))
+
+#ベクトルの内積計算
+print("a^Ha=",np.inner(np.conjugate(a),a))
