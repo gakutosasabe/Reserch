@@ -7,7 +7,7 @@ np.random.seed(0)
 
 
 #畳み込みに用いる音声波形
-clean_wave_files=["./CMU_ARCTIC/cmu_us_aew_arctic/wav/arctic_a0002.wav","./CMU_ARCTIC/cmu_us_axb_arctic/wav/arctic_a0002.wav"
+clean_wave_files=["./CMU_ARCTIC/cmu_us_aew_arctic/wav/arctic_a0002.wav","./CMU_ARCTIC/cmu_us_axb_arctic/wav/arctic_a0002.wav"]
 
 #音源数
 n_sources=len(clean_wave_files)
@@ -18,7 +18,7 @@ n_samples=0
 #ファイルを読みこむ
 for clean_wave_file in clean_wave_files:
   wav = wave.open(clean_wave_file)
-  if n_samples<wav.getnsrames():
+  if n_samples<wav.getnframes():
     n_samples=wav.getnframes() #getnframes:サンプル数
   wav.close()
 
@@ -58,10 +58,12 @@ mic_alignments = np.array(
 )
 
 #マイクロホン数
-n_channels = np.shape(mic_alighments)[0] #今回は2
+n_channels = np.shape(mic_alignments)[0] #今回は2
 
 #マイクロホンアレイの座標系
 R=mic_alignments .T +mic_array_loc[:,None]
+
+print(R.T)
 
 #部屋を生成する
 room = pa.ShoeBox(room_dim, fs=sample_rate, max_order=0)
@@ -85,3 +87,25 @@ source_locations[2, :] = np.cos(doas[:,0])
 source_locations *= distance
 source_locations += mic_array_loc[:,None]
 
+#各音源をシミュレーションに追加する
+for s in range(n_sources):
+    clean_data[s]/= np.std(clean_data[s])
+    room.add_source(source_locations[:, s], signal = clean_data[s])
+
+#シミュレーションを回す
+room.simulate(snr=SNR)
+
+#畳みこんだ波形を取得する(チャンネル，サンプル)
+multi_conv_data = room.mic_array.signals
+
+#ファイルに書き込む
+for m in range(n_channels):
+    conv_data = multi_conv_data[m,:]
+    data_scale_adjust = conv_data*np.iinfo(np.int16).max/20.
+    data_scale_adjust=data_scale_adjust.astype(np.int16)
+    wave_out = wave.open("./conv_out_{}.wav".format(m),"w")
+    wave_out.setnchannels(1)
+    wave_out.setsampwidth(2)
+    wave_out.setframerate(sample_rate)
+    wave_out.writeframes(data_scale_adjust)
+    wave_out.close()
