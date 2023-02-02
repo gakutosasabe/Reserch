@@ -21,3 +21,4 @@ print("tr(A)= \n",np.trace(A,axis1=-2, axis2=-1))
 #einsumを用いたtrace計算
 print("tr(A)= \n", np.einsum("lmm->l", A))
 
+

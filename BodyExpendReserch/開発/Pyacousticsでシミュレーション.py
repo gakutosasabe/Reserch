@@ -1,6 +1,7 @@
 import wave as wave
 import pyroomacoustics as pa
 import numpy as np
+import matplotlib.pyplot as plt
 
 #ラン数の種を初期化
 np.random.seed(0)
@@ -68,6 +69,8 @@ print(R.T)
 #部屋を生成する
 room = pa.ShoeBox(room_dim, fs=sample_rate, max_order=0)
 
+
+
 #用いるマイクロホンアレイの情報を設定する
 room.add_microphone_array(pa.MicrophoneArray(R, fs=room.fs))
 
@@ -91,6 +94,11 @@ source_locations += mic_array_loc[:,None]
 for s in range(n_sources):
     clean_data[s]/= np.std(clean_data[s])
     room.add_source(source_locations[:, s], signal = clean_data[s])
+
+#部屋をプロットする
+fig, ax = room.plot()
+plt.show()
+
 
 #シミュレーションを回す
 room.simulate(snr=SNR)
