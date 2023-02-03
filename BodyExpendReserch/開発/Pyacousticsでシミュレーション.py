@@ -55,6 +55,7 @@ mic_alignments = np.array(
     [
         [-0.01, 0.0, 0.0],
         [0.01, 0.0, 0.0],
+        [0.7, 0.0, 0.0]
     ]
 )
 
@@ -67,12 +68,13 @@ R=mic_alignments .T +mic_array_loc[:,None]
 print(R.T)
 
 #部屋を生成する
-room = pa.ShoeBox(room_dim, fs=sample_rate, max_order=0)
+room = pa.ShoeBox(room_dim, fs=sample_rate, max_order=17, absorption=0.35)
 
 
 
 #用いるマイクロホンアレイの情報を設定する
 room.add_microphone_array(pa.MicrophoneArray(R, fs=room.fs))
+
 
 #音源の場所
 doas= np.array(
@@ -81,8 +83,11 @@ doas= np.array(
      ]
 )
 
+
+
 #音源とマイクロホンの距離
 distance = 1.
+# source_locationsで各音源の位置を3次元座標で与える
 source_locations = np.zeros((3, doas.shape[0]),dtype=doas.dtype)
 source_locations[0, :] = np.cos(doas[:,1]) * np.sin(doas[:, 0])
 source_locations[1, :] = np.sin(doas[:,1]) * np.sin(doas[:, 0])
@@ -90,18 +95,29 @@ source_locations[2, :] = np.cos(doas[:,0])
 source_locations *= distance
 source_locations += mic_array_loc[:,None]
 
+
 #各音源をシミュレーションに追加する
 for s in range(n_sources):
     clean_data[s]/= np.std(clean_data[s])
     room.add_source(source_locations[:, s], signal = clean_data[s])
 
+
 #部屋をプロットする
 fig, ax = room.plot()
 plt.show()
 
-
 #シミュレーションを回す
 room.simulate(snr=SNR)
+
+
+#インパルス応答と残響時間(RT60)の取得
+impulse_responses = room.rir
+
+#残響時間の取得
+rt60 = pa.experimental.measure_rt60(impulse_responses[0][0], fs=sample_rate)
+print("残響時間:{} [sec]".format(rt60))
+
+
 
 #畳みこんだ波形を取得する(チャンネル，サンプル)
 multi_conv_data = room.mic_array.signals
