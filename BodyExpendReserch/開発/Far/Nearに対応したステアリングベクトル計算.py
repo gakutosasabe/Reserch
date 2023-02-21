@@ -33,16 +33,18 @@ mic_alignments = np.array(
 
 #音源の方向
 doas = np.array(
-    [[np.pi/2.0],
-    [np.pi/2,np.pi]
+    [[np.pi/2,0], #方位角が９０度（ｘ軸で）仰角（仰ぎ見る角度）が0度
+    [np.pi/2,np.pi] #方位角が９０度（x軸）で仰角が１８０度
     ]
 )
 
+print(doas.shape[0])
+
 #音源とマイクロホンの距離
-distance = 1
+distance = 1.
 
 #音源の位置ベクトル
-source_locations=np.zeros((3, doas.shape[0]), dtype=doas.dtype)
+source_locations=np.zeros((3, doas.shape[0]), dtype=doas.dtype) #3*2の二次元配列　１次元目はx,y,zの座標，２次元目は音源の数
 source_locations[0, :] = np.cos(doas[:, 1]) * np.sin(doas[:, 0])
 source_locations[1, :] = np.sin(doas[:, 1]) * np.sin(doas[:, 0])
 source_locations[2, :] = np.cos(doas[:, 0])
