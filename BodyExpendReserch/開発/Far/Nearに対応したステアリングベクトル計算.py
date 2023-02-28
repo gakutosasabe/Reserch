@@ -9,6 +9,17 @@ import numpy as np
 #return : steering vector (Nk x Ns x M)
 
 def calculate_steering_vecroe(mic_alignments, source_locations,freqs, sound_speed=340, is_use_far = False):
+    #マイク数を取得
+    n_channels = np.shape(mic_alignments)[1]
+
+    #音源数を取得
+    n_source = np.shape(source_locations)[1]
+
+    if is_use_far == True:
+        #音源位置を正規化
+        norm_source_locations = source_locations/np.linalg.norm(source_locations,2,axis = 0, keepdims = True)
+
+    
     return()
 
 #サンプリングレート [Hz]
@@ -50,3 +61,4 @@ source_locations[1, :] = np.sin(doas[:, 1]) * np.sin(doas[:, 0])
 source_locations[2, :] = np.cos(doas[:, 0])
 source_locations *= distance
 
+#Near仮定に基づくステアリングベクトルを計算: steering_vectors(Nk × Ns × M)
