@@ -18,6 +18,22 @@ def calculate_steering_vecroe(mic_alignments, source_locations,freqs, sound_spee
     if is_use_far == True:
         #音源位置を正規化
         norm_source_locations = source_locations/np.linalg.norm(source_locations,2,axis = 0, keepdims = True)
+        #位相を求める
+        steering_phase = np.einsum('k,ism,ism->ksm',2.j*np.pi/sound_speed*freqs,norm_source_locations[...,None],mic_alignments[:,None,:])
+        #ステアリングベクトルを算出
+        steering_vector = 1./np.sqrt(n_channels)*np.exp(steering_phase)
+
+        return(steering_vector)
+    
+    else:
+
+        #音源とマイクの距離を求める
+        #distance: Ns × Nm
+        distance = np.sqrt(np.sum(np.square(source_locations[...,None]-mic_alignments[:,None,:]),axis = 0))
+
+        #遅延時間(delay)
+
+
 
     
     return()
